@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Invah — Homepage</title>
+<script src="./vendor/react.js"></script>
+<script src="./vendor/react-dom.js"></script>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Questrial&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#ffffff;-webkit-font-smoothing:antialiased}
+:root{--fh:'Century Gothic','CenturyGothic','Century Gothic Pro','URW Gothic','Questrial',sans-serif;--fb:Helvetica,'Helvetica Neue','Helvetica LT Std',Arial,sans-serif;--deep:#153358;--sky:#3994D1;--dark:#051330}
+a{color:#153358;text-decoration:none}a:hover{color:#3994D1}
+.nl{font-family:var(--fb);font-size:15px;color:#153358;padding:10px 0;display:inline-flex;align-items:center;gap:6px;position:relative}
+.nl::after{content:"";position:absolute;left:0;right:0;bottom:2px;height:1px;background:#153358;transform:scaleX(0);transform-origin:left;transition:transform .3s ease}
+.nl:hover{color:#153358}.nl:hover::after{transform:scaleX(1)}
+.ni{position:relative}
+.dd{position:absolute;top:100%;left:-28px;padding-top:22px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:all .25s ease;z-index:60}
+.ni:hover .dd{opacity:1;visibility:visible;transform:none}
+.ddl{display:block;font-family:var(--fb);font-size:14px;color:#3E4E66;padding:6px 0}
+.ddl:hover{color:#153358}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--fb);font-size:15px;font-weight:500;height:52px;padding:0 28px;background:#153358;color:#ffffff;border:1px solid #153358;border-radius:2px;transition:background .25s ease}
+.btn:hover{background:#051330;color:#ffffff}
+.btn svg{transition:transform .25s ease}.btn:hover svg{transform:translateX(4px)}
+.lnk{display:inline-flex;align-items:center;gap:10px;font-family:var(--fb);font-size:15px;color:#153358;border-bottom:1px solid rgba(21,51,88,.3);padding-bottom:4px;transition:border-color .25s}
+.lnk:hover{color:#153358;border-color:#153358}
+.lnk svg{transition:transform .25s ease}.lnk:hover svg{transform:translateX(4px)}
+.btnw{background:#ffffff;border-color:#ffffff;color:#153358}.btnw:hover{background:#E8F1F9;color:#153358}
+.hql{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.8);transition:color .2s}.hql:hover{color:#ffffff}
+.lnw{color:#ffffff;border-color:rgba(255,255,255,.35)}.lnw:hover{color:#ffffff;border-color:#ffffff}
+.fl{display:block;font-family:var(--fb);font-size:12px;letter-spacing:.04em;color:#3E4E66;margin-bottom:6px}
+.fi{box-sizing:border-box;width:100%;height:42px;border:1px solid #D6DDE6;border-radius:2px;background:#ffffff;padding:0 12px;font-family:var(--fb);font-size:14px;color:#153358;outline:none;transition:border-color .2s, box-shadow .2s}
+.fi::placeholder{color:#8593A6}
+.fi:hover{border-color:#AEB9C7}
+.fi:focus{border-color:#153358;box-shadow:0 0 0 3px rgba(57,148,209,.18)}
+textarea.fi{height:64px;padding:10px 12px;resize:none}
+select.fi{appearance:none;-webkit-appearance:none;cursor:pointer}
+.art .im{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.art:hover .im{transform:scale(1.035)}
+.art:hover .at{color:#3994D1}
+.svb:hover span{color:#ffffff !important}
+.svb:focus-visible{outline:2px solid #3994D1;outline-offset:4px}
+.svc{transition:background .35s ease,border-color .35s ease}
+.svc:hover{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.32)}
+.svc .im{transition:transform .8s cubic-bezier(.2,.7,.2,1)}.svc:hover .im{transform:scale(1.04)}
+.svc .ar{transition:transform .25s ease}.svc:hover .ar{transform:translateX(6px)}
+.ptn .ph{transition:background .35s ease}.ptn:hover .ph{background:#E3E8EF}
+.ptn:hover .pn{color:#3994D1}
+.tab{font-family:var(--fb);font-size:14px;padding:14px 0;background:none;border:0;border-bottom:2px solid transparent;cursor:pointer;margin-bottom:-1px}
+.srch{box-sizing:border-box;width:300px;height:46px;border:1px solid #D6DDE6;background:#ffffff;border-radius:2px;padding:0 14px 0 42px;font-family:var(--fb);font-size:14px;color:#153358;outline:none}
+.srch:focus{border-color:#153358}
+.fta{font-family:var(--fb);font-size:14px;color:rgba(255,255,255,.72);display:block;padding:6px 0}
+.fta:hover{color:#ffffff}
+</style>
+</helmet>
+
+<div style="font-family: var(--fb); color: #153358; background: #ffffff; min-width: 0;">
+
+<!-- 01 NAVBAR -->
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.94); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #E8ECF1;">
+  <nav aria-label="Primary" style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 0 80px; height: 84px; display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+    <a href="#top" aria-label="Invah home" style="display: flex; align-items: center; padding: 8px 0;">
+      <img src="./assets/9679701271e941d083fb7bcd02c98eae.svg" alt="Invah" style="height: 32px; width: auto; display: block; object-fit: cover; object-position: 22.1766% 70.5716%">
+    </a>
+    <div style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
+      <a class="nl" href="#about">About Us</a>
+      <div class="ni">
+        <a class="nl" href="#services">Our Services <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.3"></path></svg></a>
+        <div class="dd">
+          <div style="width: 600px; background: #ffffff; border: 1px solid #E8ECF1; box-shadow: 0 24px 48px rgba(5,19,48,0.10); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0;">
+            <div style="padding: 28px; display: flex; flex-direction: column; gap: 20px; border-right: 1px solid #EEF1F5;">
+              <div>
+                <div style="font-family: var(--fh); font-size: 17px; color: #153358; margin-bottom: 8px;">Tax Advisory</div>
+                <a class="ddl" href="#services">Direct Tax</a>
+                <a class="ddl" href="#services">International Tax</a>
+                <a class="ddl" href="#services">Indirect Tax</a>
+              </div>
+            </div>
+            <div style="padding: 28px; display: flex; flex-direction: column; gap: 14px;">
+              <a href="#services" style="font-family: var(--fh); font-size: 17px; color: #153358;">Corporate Advisory</a>
+              <a href="#services" style="font-family: var(--fh); font-size: 17px; color: #153358;">Transaction Advisory</a>
+              <a href="#services" style="font-family: var(--fh); font-size: 17px; color: #153358;">Special Services</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ni">
+        <a class="nl" href="#insights">Insights <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.3"></path></svg></a>
+        <div class="dd">
+          <div style="width: 240px; background: #ffffff; border: 1px solid #E8ECF1; box-shadow: 0 24px 48px rgba(5,19,48,0.10); padding: 20px 28px;">
+            <a class="ddl" href="#insights">News</a>
+            <a class="ddl" href="#insights">Blogs</a>
+            <a class="ddl" href="#insights">Case Laws</a>
+            <a class="ddl" href="#insights">Archives</a>
+          </div>
+        </div>
+      </div>
+      <a class="nl" href="#partners">Partners</a>
+      <a class="nl" href="#careers">Careers</a>
+      <a class="nl" href="#contact">Contact Us</a>
+    </div>
+    <a class="btn" href="Popup.dc.html" style="height: 46px; padding: 0 22px; font-size: 14px;">Talk to our experts
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+    </a>
+  </nav>
+</header>
+
+<!-- 02 HERO + 03 FORM -->
+<section id="top" aria-label="Introduction" style="position: relative; background: #051330; overflow: hidden;">
+  <img src="./assets/f8f86066c7348d23512033e906d78cc5.jpg" alt="Light trails curving across a sea link into the Mumbai skyline at dusk" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 62%; display: block;">
+  <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,19,48,0.82) 0%, rgba(5,19,48,0.55) 42%, rgba(5,19,48,0.18) 72%, rgba(5,19,48,0.10) 100%);"></div>
+  <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 320px; background: linear-gradient(0deg, rgba(5,19,48,0.80) 0%, rgba(5,19,48,0) 100%);"></div>
+
+  <div style="position: relative; max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 0 80px; min-height: 860px; display: flex; flex-direction: column;">
+    <div style="flex: 1; display: flex; justify-content: space-between; align-items: flex-end; gap: 56px; flex-wrap: wrap; padding: 64px 0 56px; height: 439px">
+      
+
+      <!-- 03 ENQUIRY FORM (hero, right side) -->
+      
+    <div style="flex: 1 1 560px; max-width: 700px;">
+        
+        <h1 style="margin: 0; font-family: var(--fh); font-weight: 400; font-size: 92px; line-height: 1.0; letter-spacing: -0.03em; color: #ffffff;">Movement<br>with direction.</h1>
+        
+        <p style="margin: 26px 0 0; font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.84); max-width: 520px;">Invah brings together independent expertise into a connected advisory system, helping organisations move from where they are today to where they need to be tomorrow.</p>
+        <div style="display: flex; align-items: center; gap: 32px; margin-top: 40px; flex-wrap: wrap;">
+          <a class="btn btnw" href="#services">Explore our expertise
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+          </a>
+          <a class="lnk lnw" href="#about">About Invah</a>
+        </div>
+      </div></div>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.22); padding: 26px 0 32px;">
+      <div style="display: flex; align-items: baseline; gap: 14px;">
+        <span style="font-family: var(--fh); font-size: 32px; line-height: 1; color: #ffffff;">60<span style="color: #8EC3E8;">+</span></span>
+        <span style="font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.78);">Years of experience</span>
+      </div>
+      <div style="display: flex; gap: 44px; flex-wrap: wrap;">
+        <a class="hql" href="#services">Tax Advisory</a>
+        <a class="hql" href="#services">Corporate Advisory</a>
+        <a class="hql" href="#services">Transaction Advisory</a>
+        <a class="hql" href="#services">Special Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 KNOWLEDGE HUB / INSIGHTS -->
+<section id="insights" aria-labelledby="ins-h" style="background: #F7F6F2;">
+  <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 136px 80px 144px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+      <div style="max-width: 640px;">
+        
+        <h2 id="ins-h" style="margin: 0; font-family: var(--fh); font-weight: 400; font-size: 56px; line-height: 1.06; letter-spacing: -0.02em; color: #153358;">Insights, case laws<br>and perspectives.</h2>
+        <p style="margin: 24px 0 0; font-size: 17px; line-height: 1.6; color: #3E4E66; max-width: 520px;">Articles, blogs and case law from Invah, organised by topic so the right thinking is easy to find.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 22px;">
+        <div style="position: relative;">
+          <label for="ins-search" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search insights</label>
+          <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16" fill="none" style="position: absolute; left: 15px; top: 15px;"><circle cx="7" cy="7" r="5" stroke="#153358" stroke-width="1.4"></circle><path d="M11 11l3.5 3.5" stroke="#153358" stroke-width="1.4"></path></svg>
+          <input class="srch" id="ins-search" type="search" placeholder="Search insights, topics, case laws">
+        </div>
+        <a class="lnk" href="#insights">View all insights
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <div role="tablist" aria-label="Filter insights" style="display: flex; gap: 36px; margin-top: 64px; border-bottom: 1px solid #DCDFE3; flex-wrap: wrap;">
+      <sc-for list="{{tabs}}" as="tab" hint-placeholder-count="4">
+        <button class="tab" type="button" role="tab" aria-selected="{{tab.sel}}" onClick="{{tab.pick}}" style="{{tab.style}}">{{tab.label}}</button>
+      </sc-for>
+    </div>
+
+    <div style="display: flex; gap: 56px; margin-top: 48px; flex-wrap: wrap;">
+      <a class="art" href="#insights" style="flex: 7 1 520px; min-width: 0; display: flex; flex-direction: column; color: #153358;">
+        <div style="overflow: hidden; height: 460px; background: #E4E7EB;">
+          <img class="im" src="./assets/e6e180f5903a3d78df1e1eb640649ce2.jpg" alt="People moving through a busy street in an Indian city" style="width: 100%; height: 100%; object-fit: cover; object-position: center 62%; display: block;">
+        </div>
+        <div style="display: flex; gap: 14px; align-items: center; margin-top: 28px; font-size: 13px; color: #3E4E66;">
+          <span style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #153358; border: 1px solid rgba(21,51,88,0.25); padding: 5px 10px;">Featured · Case Law</span>
+          <span>[DD Month YYYY]</span><span aria-hidden="true">·</span><span>[X] min read</span>
+        </div>
+        <h3 class="at" style="margin: 18px 0 0; font-family: var(--fh); font-weight: 400; font-size: 34px; line-height: 1.18; letter-spacing: -0.015em; color: #153358; transition: color .25s;">[Featured article title — to be supplied by Invah]</h3>
+        <p style="margin: 14px 0 0; font-size: 16px; line-height: 1.6; color: #3E4E66; max-width: 620px;">[Two-line summary of the featured article — to be supplied.]</p>
+      </a>
+
+      <div style="flex: 5 1 380px; min-width: 0; display: flex; flex-direction: column;">
+        <a class="art" href="#insights" style="display: flex; gap: 24px; padding: 0 0 28px; border-bottom: 1px solid #DCDFE3; color: #153358;">
+          <div style="flex: 0 0 168px; height: 126px; overflow: hidden; background: #E4E7EB;"><img class="im" src="./assets/ea390e95524bce617eb0f80db90ae53f.jpg" alt="A passenger train moving through open countryside" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <div style="min-width: 0;">
+            <div style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #3E4E66;">Blog · [DD Mon YYYY]</div>
+            <h3 class="at" style="margin: 10px 0 0; font-family: var(--fh); font-weight: 400; font-size: 21px; line-height: 1.3; color: #153358; transition: color .25s;">[Blog title — to be supplied]</h3>
+            <div style="margin-top: 10px; font-size: 13px; color: #3E4E66;">[X] min read</div>
+          </div>
+        </a>
+        <a class="art" href="#insights" style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid #DCDFE3; color: #153358;">
+          <div style="flex: 0 0 168px; height: 126px; overflow: hidden; background: #E4E7EB;"><img class="im" src="./assets/e2c8ecdae977aaf342f790a8b5561af3.jpg" alt="Sunlight breaking through water" style="width: 100%; height: 100%; object-fit: cover; display: block;"></div>
+          <div style="min-width: 0;">
+            <div style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #3E4E66;">News &amp; Updates · [DD Mon YYYY]</div>
+            <h3 class="at" style="margin: 10px 0 0; font-family: var(--fh); font-weight: 400; font-size: 21px; line-height: 1.3; color: #153358; transition: color .25s;">[News or update headline — to be supplied]</h3>
+            <div style="margin-top: 10px; font-size: 13px; color: #3E4E66;">[X] min read</div>
+          </div>
+        </a>
+        <a class="art" href="#insights" style="display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid #DCDFE3; color: #153358;">
+          <div style="flex: 0 0 168px; height: 126px; overflow: hidden; background: #E4E7EB;"><img class="im" src="./assets/37cbbb25bb8a758097707aa0012d9e99.jpg" alt="Lanterns rising above a lit waterfront at night" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;"></div>
+          <div style="min-width: 0;">
+            <div style="font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #3E4E66;">Case Law · [DD Mon YYYY]</div>
+            <h3 class="at" style="margin: 10px 0 0; font-family: var(--fh); font-weight: 400; font-size: 21px; line-height: 1.3; color: #153358; transition: color .25s;">[Case law title — to be supplied]</h3>
+            <div style="margin-top: 10px; font-size: 13px; color: #3E4E66;">[X] min read</div>
+          </div>
+        </a>
+        <a class="lnk" href="#insights" style="margin-top: 32px; align-self: flex-start;">Browse the archives
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 LEGACY WITH NUMBERS -->
+<section id="about" aria-labelledby="leg-h" style="background: #ffffff; position: relative; overflow: hidden;">
+  <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 144px 80px 136px; position: relative;">
+    <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 32px;">
+      
+      
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 64px; flex-wrap: wrap;">
+      <h2 id="leg-h" style="margin: 0; flex: 1 1 640px; max-width: 980px; font-family: var(--fh); font-weight: 400; font-size: 46px; line-height: 1.24; letter-spacing: -0.018em; color: #6E7D93;">Like a spine, Invah <span style="color: #153358;">supports without restricting</span>, <span style="color: #153358;">flexes without breaking</span>, and <span style="color: #153358;">keeps the entire system aligned</span>. Progress should never come at the cost of what keeps an organisation strong.</h2>
+      <a class="lnk" href="#about" style="flex: 0 0 auto;">About Us
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+      </a>
+    </div>
+
+    <!-- Flow element: Point A to Point B, an upward path tying the numbers together -->
+    <svg aria-hidden="true" viewBox="0 0 1280 120" preserveAspectRatio="none" style="display: block; width: 100%; height: 120px; margin-top: 72px;">
+      <path d="M0 108 C 320 108, 420 96, 640 60 S 1000 12, 1280 12" fill="none" stroke="#3994D1" stroke-width="1.5" vector-effect="non-scaling-stroke"></path>
+      <path d="M0 118 C 320 118, 420 106, 640 70 S 1000 22, 1280 22" fill="none" stroke="#153358" stroke-opacity="0.18" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+    </svg>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; margin-top: 8px;">
+      <div style="border-top: 1px solid #153358; padding-top: 28px;">
+        <div style="font-family: var(--fh); font-size: 96px; line-height: 1; letter-spacing: -0.03em; color: #153358;">60<span style="color: #3994D1;">+</span></div>
+        <div style="margin-top: 18px; font-size: 16px; line-height: 1.5; color: #3E4E66;">Years of experience</div>
+      </div>
+      <div style="border-top: 1px solid #DCDFE3; padding-top: 28px;">
+        <div style="font-family: var(--fh); font-size: 96px; line-height: 1; letter-spacing: -0.03em; color: #153358;">[00]<span style="color: #3994D1;">+</span></div>
+        <div style="margin-top: 18px; font-size: 16px; line-height: 1.5; color: #3E4E66;">[Impact metric — to be confirmed]</div>
+      </div>
+      <div style="border-top: 1px solid #DCDFE3; padding-top: 28px;">
+        <div style="font-family: var(--fh); font-size: 96px; line-height: 1; letter-spacing: -0.03em; color: #153358;">[00]<span style="color: #3994D1;">+</span></div>
+        <div style="margin-top: 18px; font-size: 16px; line-height: 1.5; color: #3E4E66;">[Impact metric — to be confirmed]</div>
+      </div>
+      <div style="border-top: 1px solid #DCDFE3; padding-top: 28px;">
+        <div style="font-family: var(--fh); font-size: 96px; line-height: 1; letter-spacing: -0.03em; color: #153358;">[00]<span style="color: #3994D1;">+</span></div>
+        <div style="margin-top: 18px; font-size: 16px; line-height: 1.5; color: #3E4E66;">[Impact metric — to be confirmed]</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 SERVICES -->
+<section id="services" aria-labelledby="svc-h" style="background: #153358; position: relative; overflow: hidden;">
+  <img src="./assets/1ef91f02b0e5406e807e9fe739339f15.svg" alt="" aria-hidden="true" style="position: absolute; right: -120px; top: -80px; width: 560px; height: auto; opacity: 0.04; pointer-events: none;">
+  <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 144px 80px; position: relative;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+      <div style="max-width: 760px;">
+        
+        <h2 id="svc-h" style="margin: 0; font-family: var(--fh); font-weight: 400; font-size: 56px; line-height: 1.08; letter-spacing: -0.02em; color: #ffffff;">Independent expertise.<br><span style="color: rgba(255,255,255,0.5);">One connected advisory system.</span></h2>
+      </div>
+      <a class="lnk lnw" href="#services">All services
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+      </a>
+    </div>
+
+    <div style="display: flex; gap: 80px; margin-top: 88px; flex-wrap: wrap; align-items: flex-start;">
+      <!-- Service list (accordion) -->
+      <div role="tablist" aria-label="Services" style="flex: 5 1 420px; min-width: 0; display: flex; flex-direction: column; border-bottom: 1px solid rgba(255,255,255,0.16);">
+        <sc-for list="{{services}}" as="s" hint-placeholder-count="4">
+          <div style="border-top: 1px solid rgba(255,255,255,0.16); position: relative;">
+            <span aria-hidden="true" style="{{s.barStyle}}"></span>
+            <button class="svb" type="button" role="tab" aria-selected="{{s.sel}}" onClick="{{s.pick}}" onMouseEnter="{{s.pick}}" style="width: 100%; display: flex; align-items: baseline; gap: 28px; background: none; border: 0; padding: 30px 0; cursor: pointer; text-align: left;">
+              <span style="{{s.numStyle}}">{{s.num}}</span>
+              <span style="{{s.titleStyle}}">{{s.title}}</span>
+            </button>
+            <sc-if value="{{s.active}}" hint-placeholder-val="{{false}}">
+              <div style="padding: 0 0 34px 52px;">
+                <p style="margin: 0; font-size: 16px; line-height: 1.65; color: rgba(255,255,255,0.74); max-width: 420px;">{{s.desc}}</p>
+                <sc-if value="{{s.hasSubs}}" hint-placeholder-val="{{false}}">
+                  <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px;">
+                    <sc-for list="{{s.subs}}" as="sub" hint-placeholder-count="3">
+                      <span style="font-size: 12px; color: rgba(255,255,255,0.88); border: 1px solid rgba(255,255,255,0.24); padding: 6px 12px;">{{sub}}</span>
+                    </sc-for>
+                  </div>
+                </sc-if>
+                <a class="lnk lnw" href="{{s.href}}" style="margin-top: 26px;">Explore {{s.title}}
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+                </a>
+              </div>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+
+      <!-- Active service image -->
+      <div style="flex: 7 1 520px; min-width: 0;">
+        <div style="position: relative; height: 600px; overflow: hidden; background: #0C2444;">
+          <sc-for list="{{services}}" as="s" hint-placeholder-count="1">
+            <img src="{{s.img}}" alt="{{s.alt}}" style="{{s.imgStyle}}">
+          </sc-for>
+          <svg aria-hidden="true" viewBox="0 0 700 600" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;">
+            <path d="M0 560 C 180 560, 260 470, 360 380 S 560 250, 700 240" fill="none" stroke="#3994D1" stroke-width="1.5" vector-effect="non-scaling-stroke"></path>
+          </svg>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 24px; margin-top: 22px; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.72);">
+          <span><span style="color: #ffffff;">{{current.title}}.</span> {{current.desc}}</span>
+          <span style="flex: 0 0 auto; font-size: 13px; letter-spacing: 0.12em; color: rgba(255,255,255,0.72);">[{{current.num}} / 04]</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PARTNERS -->
+<section id="partners" aria-labelledby="ptn-h" style="background: #ffffff;">
+  <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 144px 80px 152px;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap;">
+      <div style="max-width: 700px;">
+        
+        <h2 id="ptn-h" style="margin: 0; font-family: var(--fh); font-weight: 400; font-size: 56px; line-height: 1.08; letter-spacing: -0.02em; color: #153358;">Direct access to<br>senior partners.</h2>
+        <p style="margin: 24px 0 0; font-size: 17px; line-height: 1.6; color: #3E4E66; max-width: 520px;">[Short introduction to Invah's partner group — to be supplied.]</p>
+      </div>
+      <a class="lnk" href="#partners">Explore our partners
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+      </a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; margin-top: 72px;">
+      <sc-for list="{{partners}}" as="p" hint-placeholder-count="4">
+        <a class="ptn" href="#partners" style="display: flex; flex-direction: column; color: #153358; min-width: 0;">
+          <div class="ph" style="aspect-ratio: 4 / 5; background: #EEF1F5; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img src="./assets/d5351a2232a139083f5cd4218351a215.svg" alt="" aria-hidden="true" style="width: 34%; height: auto; opacity: 0.10;">
+            <span style="position: absolute; left: 18px; bottom: 16px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #5B6B82;">Portrait to be supplied</span>
+          </div>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-top: 24px;">
+            <div>
+              <h3 class="pn" style="margin: 0; font-family: var(--fh); font-weight: 400; font-size: 23px; line-height: 1.25; color: #153358; transition: color .25s;">[Partner Name]</h3>
+              <div style="margin-top: 6px; font-size: 14px; color: #3E4E66;">[Designation]</div>
+            </div>
+            <span aria-hidden="true" style="flex: 0 0 auto; width: 34px; height: 34px; border: 1px solid #DCDFE3; display: flex; align-items: center; justify-content: center;">
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M4 12L12 4M6 4h6v6" stroke="#153358" stroke-width="1.4"></path></svg>
+            </span>
+          </div>
+          <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid #E8ECF1; font-size: 13px; line-height: 1.5; color: #3E4E66;"><span style="color: #153358;">Expertise</span> · [Area of expertise]</div>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<!-- GLOBAL FOOTER -->
+<footer id="contact" style="background: #051330; color: #ffffff; position: relative; overflow: hidden;">
+  <svg aria-hidden="true" viewBox="0 0 1440 520" preserveAspectRatio="none" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none;">
+    <path d="M760 520 C 980 520, 1060 330, 1200 250 S 1380 160, 1440 150" fill="none" stroke="#3994D1" stroke-opacity="0.35" stroke-width="1.5" vector-effect="non-scaling-stroke"></path>
+    <path d="M800 520 C 1010 520, 1090 346, 1225 268 S 1395 182, 1440 176" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1" vector-effect="non-scaling-stroke"></path>
+  </svg>
+  <div style="max-width: 1440px; margin: 0 auto; box-sizing: border-box; padding: 96px 80px 40px; position: relative;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; gap: 48px; flex-wrap: wrap; padding-bottom: 72px; border-bottom: 1px solid rgba(255,255,255,0.12);">
+      <div>
+        <img src="./assets/7d9dc50d4630a4a2ebee487f108bf0c0.svg" alt="Invah" style="height: 40px; width: auto; display: block">
+        <p style="margin: 40px 0 0; font-family: var(--fh); font-size: 40px; line-height: 1.15; letter-spacing: -0.015em; color: #ffffff;">Invah was built for motion.</p>
+      </div>
+      <a href="Popup.dc.html" style="display: inline-flex; align-items: center; gap: 10px; height: 52px; padding: 0 28px; background: #ffffff; color: #153358; font-size: 15px; border-radius: 2px;">Connect with Invah
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5"></path></svg>
+      </a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px; padding: 56px 0;">
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8EC3E8; margin-bottom: 14px;">Company</div>
+        <a class="fta" href="#about">About Us</a><a class="fta" href="#partners">Partners</a><a class="fta" href="#careers">Careers</a><a class="fta" href="#contact">Contact Us</a>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8EC3E8; margin-bottom: 14px;">Services</div>
+        <a class="fta" href="#services">Tax Advisory</a><a class="fta" href="#services">Corporate Advisory</a><a class="fta" href="#services">Transaction Advisory</a><a class="fta" href="#services">Special Services</a>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8EC3E8; margin-bottom: 14px;">Insights</div>
+        <a class="fta" href="#insights">News</a><a class="fta" href="#insights">Blogs</a><a class="fta" href="#insights">Case Laws</a><a class="fta" href="#insights">Archives</a>
+      </div>
+      <div>
+        <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #8EC3E8; margin-bottom: 14px;">Contact</div>
+        <span class="fta">[Office address]</span><span class="fta">[Email address]</span><span class="fta">[Phone number]</span>
+        <div style="margin-top: 18px; font-size: 13px; color: rgba(255,255,255,0.6);">[Certifications / recognitions]</div>
+      </div>
+    </div>
+    <div style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; padding-top: 28px; border-top: 1px solid rgba(255,255,255,0.12); font-size: 13px; color: rgba(255,255,255,0.6);">
+      <span>© 2026 Invah. All rights reserved.</span>
+      <div style="display: flex; gap: 28px; flex-wrap: wrap;">
+        <a href="#privacy" style="color: rgba(255,255,255,0.72);">Privacy Policy</a>
+        <a href="#terms" style="color: rgba(255,255,255,0.72);">Terms &amp; Conditions</a>
+        <a href="#cookies" style="color: rgba(255,255,255,0.72);">Cookie Policy</a>
+        <a href="#sitemap" style="color: rgba(255,255,255,0.72);">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":5300}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { tab: 'All', svc: 0 };
+  }
+  renderVals() {
+    var self = this;
+    var labels = ['All', 'Case Laws', 'News & Updates', 'Blogs'];
+    var tabs = labels.map(function (l) {
+      var on = self.state.tab === l;
+      return {
+        label: l,
+        sel: on ? 'true' : 'false',
+        style: on ? 'color:#153358;border-bottom-color:#153358;' : 'color:#5B6B82;',
+        pick: function () { self.setState({ tab: l }); }
+      };
+    });
+    var desc = '[Short service description — to be supplied]';
+    var data = [
+      { title: 'Tax Advisory', href: '#tax-advisory', subs: ['Direct Tax', 'International Tax', 'Indirect Tax'], img: './assets/633300b974cb231dab2175db22180586.jpg', alt: 'Water flowing over smooth stones', pos: 'center' },
+      { title: 'Corporate Advisory', href: '#corporate-advisory', subs: [], img: './assets/f3543aaa3b6333b105dd519a9c672943.jpg', alt: 'Traffic streaming through a lit tunnel', pos: 'center' },
+      { title: 'Transaction Advisory', href: '#transaction-advisory', subs: [], img: './assets/248d36602c97bc68588aec8e372795f0.jpg', alt: 'Horses running through dust in warm light', pos: 'center' },
+      { title: 'Special Services', href: '#special-services', subs: [], img: './assets/f041c412777942c0922eedba49883cd1.jpg', alt: 'A wave curling in golden light', pos: 'center 55%' }
+    ];
+    var cur = this.state.svc || 0;
+    var services = data.map(function (d, i) {
+      var on = i === cur;
+      return {
+        title: d.title, href: d.href, subs: d.subs, hasSubs: d.subs.length > 0, desc: desc,
+        img: d.img, alt: on ? d.alt : '', num: '0' + (i + 1), active: on, sel: on ? 'true' : 'false',
+        pick: function () { if (self.state.svc !== i) self.setState({ svc: i }); },
+        barStyle: 'position:absolute;top:-1px;left:0;height:2px;background:#3994D1;transition:width .6s cubic-bezier(.2,.7,.2,1);width:' + (on ? '42%' : '0'),
+        numStyle: 'font-family:var(--fb);font-size:13px;letter-spacing:.12em;color:' + (on ? '#8EC3E8' : 'rgba(255,255,255,0.5)') + ';flex:0 0 24px',
+        titleStyle: 'font-family:var(--fh);font-size:30px;line-height:1.2;letter-spacing:-.01em;transition:color .3s;color:' + (on ? '#ffffff' : 'rgba(255,255,255,0.55)'),
+        imgStyle: 'position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:' + d.pos + ';transition:opacity .6s ease, transform 1.2s ease;opacity:' + (on ? '1' : '0') + ';transform:scale(' + (on ? '1' : '1.04') + ')'
+      };
+    });
+    return { tabs: tabs, partners: [1, 2, 3, 4], services: services, current: services[cur] };
+  }
+}
+</script>
+</body>
+</html>
